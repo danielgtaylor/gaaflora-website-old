@@ -1,0 +1,43 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel="icon", type="image/png", href="/images/favicon.png")
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Marck+Script|Raleway:200|Waiting+for+the+Sunrise')
+    link(rel='stylesheet', href='/stylesheets/zocial.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .main-container
+      nav
+        ul.right
+          li: a(href="/aspect") Aspect
+          li: a(href="/#slogan") Portfolio
+          li: a(href="/pricing") Price Out
+          li: a(href="/appointments") Appointments
+        ul
+          li: a(href="/")
+            img.left(src="/images/camera.png", style="margin-top: -12px;")
+            | Gaaflora Galleries
+      div.clear
+      block content
+      #fb-root
+      script </script>
+      .topsep
+      section.social
+        br
+        .fb-like-box(data-href="http://www.facebook.com/pages/Gaaflora-Galleries-Photography/142152792569848", data-width="325", data-show-faces="false", data-stream="false", data-header="true", data-colorscheme="dark")
+        br
+        br
+        a.twitter-follow-button(href="https://twitter.com/gaaflora", data-show-count="false", data-width="130px") Follow @gaaflora
+        br
+        br
+      .bottomsep
+      .social
+        a.zocial.call Call
+        a.zocial.gmail Email
+        a.zocial.cal(href="/appointments") Appointments
+        a.zocial.facebook Facebook
+        a.zocial.twitter Twitter
+        a.zocial.googleplus Google+
+      .footer Copyright &copy; 2013 Gaaflora Galleries
+  script(type="text/javascript", src="/javascripts/main.js")
