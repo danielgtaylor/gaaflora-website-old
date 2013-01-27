@@ -201,12 +201,13 @@ nav
   font-size: 72pt
   color: white
   background: black
-  opacity: 0.9
+  opacity: 0
   transition: opacity 0.4s
+  pointer-events: none
 
-  &.hidden
-    opacity: 0
-    pointer-events: none
+  &.show
+    opacity: 0.9
+    pointer-events: auto
 
 .footer
   padding-top: 1em

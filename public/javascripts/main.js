@@ -1,11 +1,11 @@
 $(document).ready(function () {
     $('.call').click(function (event) {
-        $('#phone').removeClass('hidden');
+        $('#phone').addClass('show');
     });
 
     $('#phone').click(function (event) {
-        $('#phone').addClass('hidden');
-    });
+        $('#phone').removeClass('show');
+    }).show();
 
     // Social plugins
     (function(d, s, id) {
