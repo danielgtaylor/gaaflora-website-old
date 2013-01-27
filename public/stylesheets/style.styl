@@ -1,7 +1,16 @@
 transition()
   -webkit-transition: arguments
   -moz-transition: arguments
+  -o-transition: arguments
+  -ms-transition: arguments
   transition: arguments
+
+transform()
+  -webkit-transform: arguments
+  -moz-transform: arguments
+  -o-transform: arguments
+  -ms-transform: arguments
+  transform: arguments
 
 body
   padding: 30px
@@ -88,9 +97,26 @@ nav
 
   &.small
     display: inline-block
+    cursor: pointer
 
     &:not(.last)
       margin-right: 40px
+
+    // Add layer to lighten on hover
+    &:after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: white
+      opacity: 0.0
+      transition: opacity 0.4s
+
+    &:hover:after
+      opacity: 0.25
+      transition: opacity 0.4s
 
   .slideshow-image
     border-radius: 2px
@@ -102,6 +128,18 @@ nav
     font-size: 24pt
     color: black
     margin-bottom: -10px
+
+.rot1
+  transform: rotate(1deg) translateZ(0)
+
+.rot2
+  transform: rotate(2deg) translateZ(0)
+
+.rotm1
+  transform: rotate(-1deg) translateZ(0)
+
+.rotm1
+  transform: rotate(-2deg) translateZ(0)
 
 .spaced
   margin-top: 1em;
@@ -121,10 +159,54 @@ nav
 
 .social
   text-align: center
-  font-size: 8pt
+  font-size: 7pt
 
   .zocial
     margin: 1.5em 0.5em 0.5em 0.5em
+
+    &:before
+      margin: 0
+
+    &.gmail
+      color: black
+
+.hidden
+  opacity: 0
+
+#call-now
+  cursor: pointer
+  position: fixed
+  top: 30px
+  right: -50px
+  padding: 2px
+  color: #ddd
+  background: #030303
+  border-radius: 4px
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5)
+  transform: rotate(45deg) translateZ(0)
+
+  div
+    padding: 0.5em 5em
+    border: 1px dashed #222
+    border-radius: 4px
+
+#phone 
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  padding-top: 200px
+  text-align: center
+  font-size: 72pt
+  color: white
+  background: black
+  opacity: 0.9
+  transition: opacity 0.4s
+
+  &.hidden
+    opacity: 0
+    pointer-events: none
 
 .footer
   padding-top: 1em

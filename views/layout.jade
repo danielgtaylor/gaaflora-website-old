@@ -2,6 +2,10 @@ doctype 5
 html
   head
     title= title
+      | :: Gaaflora Galleries
+    //meta(name="description", content="#{description}")
+    //meta(property="og:title", content="#{title} :: Gaaflora Galleries")
+    //meta(property="og:description", content="#{description}")
     link(rel="icon", type="image/png", href="/images/favicon.png")
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Marck+Script|Raleway:200|Waiting+for+the+Sunrise')
     link(rel='stylesheet', href='/stylesheets/zocial.css')
@@ -34,10 +38,13 @@ html
       .bottomsep
       .social
         a.zocial.call Call
-        a.zocial.gmail Email
+        a.zocial.gmail(href="mailto:kari@gaaflora.com") Email
         a.zocial.cal(href="/appointments") Appointments
-        a.zocial.facebook Facebook
-        a.zocial.twitter Twitter
+        a.zocial.facebook(href="https://www.facebook.com/pages/Gaaflora-Galleries-Photography/142152792569848") Facebook
+        a.zocial.twitter(href="https://twitter.com/gaaflora") Twitter
         a.zocial.googleplus Google+
-      .footer Copyright &copy; 2013 Gaaflora Galleries
+      .footer Copyright &copy; 2013 Gaaflora Galleries Photography - Belltown in Seattle, WA
+  #call-now.call: div Call now
+  #phone.hidden (814) 566-9208
+  script(type="text/javascript", src="http://code.jquery.com/jquery-1.7.2.min.js")
   script(type="text/javascript", src="/javascripts/main.js")

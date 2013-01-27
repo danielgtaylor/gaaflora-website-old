@@ -4,13 +4,13 @@
 #
 
 exports.index = (req, res) ->
-  res.render 'index', title: 'Gaaflora Galleries'
+  res.render 'index', title: 'Welcome', description: ''
 
 exports.about = (req, res) ->
-  res.render 'about', title: 'Aspect :: Gaaflora Galleries'
+  res.render 'about', title: 'Aspect'
 
 exports.pricing = (req, res) ->
-  res.render 'pricing', title: 'Price Out :: Gaaflora Galleries'
+  res.render 'pricing', title: 'Price Out'
 
 exports.appointments = (req, res) ->
-  res.render 'appointments', title: 'Appointments :: Gaaflora Galleries'
+  res.render 'appointments', title: 'Appointments'
