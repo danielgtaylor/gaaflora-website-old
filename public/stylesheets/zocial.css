@@ -42,6 +42,10 @@ a.zocial {
 	border-radius: .3em;
 }
 
+a.zocial:hover {
+	text-decoration: none;
+}
+
 .zocial:before {
 	content: "";
 	border-right: 0.075em solid rgba(0,0,0,0.1);

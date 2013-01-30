@@ -10,6 +10,7 @@ html
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Marck+Script|Raleway:200|Waiting+for+the+Sunrise')
     link(rel='stylesheet', href='/stylesheets/zocial.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
+    != css('/stylesheets/style')
   body
     .main-container
       nav
@@ -47,4 +48,4 @@ html
   #call-now.call: div Call now
   #phone(style="display: none") (814) 566-9208
   script(type="text/javascript", src="http://code.jquery.com/jquery-1.7.2.min.js")
-  script(type="text/javascript", src="/javascripts/main.js")
+  != js('/javascripts/main')

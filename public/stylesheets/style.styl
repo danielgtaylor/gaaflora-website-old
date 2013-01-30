@@ -1,28 +1,20 @@
-transition()
-  -webkit-transition: arguments
-  -moz-transition: arguments
-  -o-transition: arguments
-  -ms-transition: arguments
-  transition: arguments
-
-transform()
-  -webkit-transform: arguments
-  -moz-transform: arguments
-  -o-transform: arguments
-  -ms-transform: arguments
-  transform: arguments
+@import 'nib'
+@import 'bootstrap'
 
 body
   padding: 30px
   font: 14px 'Raleway', 'Lucida Grande', Helvetica, Arial, sans-serif
   color: #eee;
   background: #222 url(/images/dark_leather.png);
-  background-image: -webkit-radial-gradient(rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.025)), url(/images/dark_leather.png);
-  background-image: -moz-radial-gradient(rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.025)), url(/images/dark_leather.png);
-  background-image: -o-radial-gradient(rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.025)), url(/images/dark_leather.png);
-  background-image: -ms-radial-gradient(rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.025)), url(/images/dark_leather.png);
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.025)), url(/images/dark_leather.png);
+  background-image: -webkit-radial-gradient(rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.035)), url(/images/dark_leather.png);
+  background-image: -moz-radial-gradient(rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.035)), url(/images/dark_leather.png);
+  background-image: -ms-radial-gradient(rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.035)), url(/images/dark_leather.png);
+  background-image: -o-radial-gradient(rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.035)), url(/images/dark_leather.png);
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.035)), url(/images/dark_leather.png);
   margin: 0px;
+
+p, li, h1, h2, h3, h4, h5, h6
+  color: #eee
 
 a
   color: #00B7FF
@@ -44,13 +36,18 @@ nav
         color: #eee
         font-size: 18pt
         text-decoration: none
+        line-height: 24px
         padding: 0.5em
         margin: 0
-        transition all 0.4s
+        transition: all
+        transition-duration: 0.4s
 
         &:hover
+          color: #eee
+          text-decoration: none
           text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7)
-          transition: all 0.4s
+          transition: all
+          transition-duration: 0.4s
 
 .right
   float: right
@@ -74,6 +71,7 @@ nav
   background: -moz-radial-gradient(center 0, ellipse farthest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
   background: -o-radial-gradient(center 0, ellipse farthest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
   background: -ms-radial-gradient(center 0, ellipse farthest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
+  background: radial-gradient(center 0, ellipse farthest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
   border-top: 1px solid rgba(0, 0, 0, 0.05)
   clear: both
 
@@ -85,6 +83,7 @@ nav
   background: -moz-radial-gradient(center 100%, ellipse farthest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
   background: -o-radial-gradient(center 100%, ellipse farthest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
   background: -ms-radial-gradient(center 100%, ellipse farthest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
+  background: radial-gradient(center 100%, ellipse farthest-side, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0))
   border-bottom: 1px solid rgba(0, 0, 0, 0.05)
   clear: both
 
@@ -112,11 +111,13 @@ nav
       height: 100%
       background-color: white
       opacity: 0.0
-      transition: opacity 0.4s
+      transition: opacity
+      transition-duration: 0.4s
 
     &:hover:after
-      opacity: 0.25
-      transition: opacity 0.4s
+      opacity: 25
+      transition: opacity
+      transition-duration: 0.4s
 
   .slideshow-image
     border-radius: 2px
@@ -161,6 +162,9 @@ nav
   text-align: center
   font-size: 7pt
 
+  a:hover
+    color: white
+
   .zocial
     margin: 1.5em 0.5em 0.5em 0.5em
 
@@ -187,11 +191,12 @@ nav
 
   div
     padding: 0.5em 5em
-    border: 1px dashed #222
+    border: 1px dashed #303030
     border-radius: 4px
 
 #phone 
   position: fixed
+  z-index: 9999
   top: 0
   left: 0
   width: 100%
@@ -202,11 +207,12 @@ nav
   color: white
   background: black
   opacity: 0
-  transition: opacity 0.4s
+  transition: opacity
+  transition-duration: 0.4s
   pointer-events: none
 
   &.show
-    opacity: 0.9
+    opacity: 90
     pointer-events: auto
 
 .footer

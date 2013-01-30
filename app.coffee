@@ -3,12 +3,15 @@
 # Module dependencies.
 #
 
+bootstrap = require 'bootstrap-stylus'
 express = require 'express'
-routes = require './routes'
 http = require 'http'
+nib = require 'nib'
 path = require 'path'
+routes = require './routes'
+stylus = require 'stylus'
 
-app = express();
+app = express()
 
 app.configure ->
   app.set 'port', process.env.PORT || 3000
@@ -19,7 +22,9 @@ app.configure ->
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use app.router
-  app.use require('stylus').middleware(__dirname + '/public')
+  app.use require('connect-assets')
+    src: __dirname + '/public'
+    buildDir: __dirname + '/public'
   app.use express.static(path.join(__dirname, 'public'))
 
 app.configure 'development', ->
