@@ -1,6 +1,4 @@
 $(document).ready ->
-  console.log 'ready'
-
   $('.call').click (event) ->
     $('#phone').addClass 'show'
 
