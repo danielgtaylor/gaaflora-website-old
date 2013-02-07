@@ -1,3 +1,13 @@
+class Pricing
+  @submitWall: (contact) ->
+    $.ajax
+      url: '/pricing'
+      type: 'POST'
+      data:
+        contact: contact
+      success: ->
+        location.reload()
+
 $(document).ready ->
   $('.call').click (event) ->
     $('#phone').addClass 'show'
@@ -6,6 +16,12 @@ $(document).ready ->
     $('#phone').removeClass 'show'
   
   $('#phone').show()
+
+  $('#pricingWallSubmit').click (event) ->
+    Pricing.submitWall $('#pricingWallValue').val()
+
+  $('#pricingWallSkip').click (event) ->
+    Pricing.submitWall ''
   
 # Javascripts from other services
 `

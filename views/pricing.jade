@@ -3,4 +3,12 @@ extends layout
 block content
   .topsep
   .spaced
-      | Pricing coming soon!
+    | Pricing coming soon!
+  if !submittedPricing
+    #pricingWall
+      p Please enter your phone number or email address to continue
+      div
+        input#pricingWallValue(type="text", placeholder="Phone number or email address")
+        | &nbsp;&nbsp;
+        a#pricingWallSubmit.btn.btn-info Continue
+      a#pricingWallSkip(href="#") No thanks, just show me the pricing!

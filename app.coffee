@@ -19,6 +19,7 @@ app.configure ->
   app.set 'view engine', 'jade'
   app.use express.favicon()
   app.use express.logger('dev')
+  app.use express.cookieParser()
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use app.router
@@ -33,6 +34,7 @@ app.configure 'development', ->
 app.get '/', routes.index
 app.get '/aspect', routes.about
 app.get '/pricing', routes.pricing
+app.post '/pricing', routes.pricingInfo
 app.get '/appointments', routes.appointments
 
 http.createServer(app).listen app.get('port'), ->

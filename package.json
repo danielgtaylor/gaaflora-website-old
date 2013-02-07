@@ -12,6 +12,7 @@
     "coffee-script": "1.4.0",
     "connect-assets": "*",
     "nib": "*",
-    "bootstrap-stylus": "*"
+    "bootstrap-stylus": "*",
+    "nodemailer": "*"
   }
 }
