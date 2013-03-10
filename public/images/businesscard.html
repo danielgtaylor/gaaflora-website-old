@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Marck+Script|Raleway:200|Waiting+for+the+Sunrise|Quintessential'/>
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" rel="stylesheet">
+        <style>
+            body {
+                background-color: rgba(0, 0, 0, 0.5);
+                font-family: 'Raleway', 'Lucida Grande', Helvetica, Arial, sans-serif;
+            }
+
+            hr {
+                display: block;
+                width: 90%;
+                margin-top: 55px;
+                border: none;
+                background-color: rgba(0, 0, 0, 0.4);
+                border-bottom: 3px solid rgba(255, 255, 255, 0.125);
+                height: 3px;
+            }
+
+            .card {
+                position: relative;
+                width: 1039px;
+                height: 697px;
+                margin: 40px;
+                float: left;
+                border-radius: 6px;
+                box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+            }
+
+            .polaroid {
+                border: 50px solid white;
+                border-left: 80px solid white;
+                border-right: 200px solid white;
+                border-radius: 6px;
+                width: 759px;
+                height: 597px;
+            }
+
+            .polaroid span {
+                position: absolute;
+                right: -140px;
+                top: 46%;
+                font-family: 'Marck Script', 'Lucida Grande', Helvetica, Arial, sans-serif;
+                font-size: 32pt;
+                -webkit-transform: rotate(-90deg);
+            }
+
+            .back {
+                color: white;
+                background-color: #333;
+                background-image: -webkit-radial-gradient(rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 0.035)), url(/images/dark_leather.png);
+                font-size: 38pt;
+            }
+
+            .back .camera {
+                margin-bottom: -64px;
+            }
+
+            .back h1 {
+                display: inline-block;
+                font-family: 'Marck Script', 'Lucida Grande', Helvetica, Arial, sans-serif;
+                font-size: 52pt;
+                margin: 0 0 0 25px;
+                padding: 0;
+            }
+
+            .back table td {
+                padding-right: 25px;
+            }
+
+            .centered {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="polaroid">
+                <img src="/images/guitar_800.jpg" width="759" height="597"/>
+                <span>Gaaflora Galleries Photography</span>
+            </div>
+        </div>
+        <div class="card back">
+            <div style="margin: 20px 45px;">
+                <img class="camera" src="/images/camera-256.png"/>
+                <h1>Gaaflora Galleries<br/>Photography</h1>
+            </div>
+            <hr/>
+            <div style="margin: 50px 62px; line-height: 140%">
+                <table>
+                    <tr>
+                        <td><i class="icon-user"></i></td>
+                        <td>Kari Taylor</td>
+                    </tr>
+                    <tr>
+                        <td><i class="icon-phone"></i></td>
+                        <td>(814) 566-9208</td>
+                    </tr>
+                    <tr>
+                        <td><i class="icon-envelope"></i></td>
+                        <td>kari@gaaflora.com</td>
+                    </tr>
+                    <tr>
+                        <td><i class="icon-globe"></i></td>
+                        <td>www.gaaflora.com</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

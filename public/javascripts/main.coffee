@@ -1,4 +1,4 @@
-class Pricing
+class @Pricing
   @submitWall: (contact) ->
     $.ajax
       url: '/pricing'
@@ -7,6 +7,46 @@ class Pricing
         contact: contact
       success: ->
         location.reload()
+
+class @Gallery
+  @currentItem = 0
+  @windowWidth = $(window).width()
+  @windowHeight = $(window).height()
+
+  @init: (items) ->
+    $('#gallery').fadeIn()
+
+    @items = items
+    @currentItem = 0
+
+    $('#gallery .pane').html('').css 'transform', 'none'
+
+    for item, i in items
+      img = new Image()
+      img.pos = i
+      img.onload = ->
+        left = @pos * Gallery.windowWidth
+        left += (Gallery.windowWidth / 2) - (@width / 2)
+        $(@).css 'left', left
+        top = (Gallery.windowHeight / 2) - (@height / 2)
+        $(@).css 'top', top
+        $('#gallery .pane').append(@)
+
+      img.src = item.src
+
+  @next: ->
+    @currentItem++ if @currentItem < @items.length - 1
+    @move()
+
+  @previous: ->
+    @currentItem-- if @currentItem > 0
+    @move()
+
+  @move: ->
+    $('#gallery .pane').css 'transform', "translateX(-#{@windowWidth * @currentItem}px)"
+
+  @hide: ->
+    $('#gallery').hide()
 
 $(document).ready ->
   $('.call').click (event) ->
@@ -22,6 +62,19 @@ $(document).ready ->
 
   $('#pricingWallSkip').click (event) ->
     Pricing.submitWall ''
+
+  $('#gallery').click (event) ->
+    Gallery.hide()
+
+  $('#weddings, #events, #baby, #bands, #portraits, #around').click (event) ->
+    Gallery.init [{src: '/images/guitar_800.jpg'}, {src: '/images/guitar_800.jpg'}, {src: '/images/guitar_800.jpg'}]
+
+  $(document).keydown (event) ->
+    console.log event
+    switch event.which
+      when 27 then Gallery.hide()
+      when 39 then Gallery.next()
+      when 37 then Gallery.previous()
   
 # Javascripts from other services
 `
