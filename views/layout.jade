@@ -8,6 +8,7 @@ html
     //meta(property="og:description", content="#{description}")
     link(rel="icon", type="image/png", href="/images/favicon.png")
     link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Marck+Script|Raleway:200|Waiting+for+the+Sunrise|Quintessential')
+    link(rel='stylesheet', href='//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css')
     link(rel='stylesheet', href='/stylesheets/zocial.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
     != css('/stylesheets/style')
@@ -44,10 +45,14 @@ html
         a.zocial.facebook(href="https://www.facebook.com/pages/Gaaflora-Galleries-Photography/142152792569848") Facebook
         a.zocial.twitter(href="https://twitter.com/gaaflora") Twitter
         a.zocial.googleplus Google+
-      .footer Copyright &copy; 2013 Gaaflora Galleries Photography ~ +1 (814) 566-9208 ~ Belltown in Seattle, WA
+      .footer Copyright &copy; 2013 Gaaflora Galleries Photography ~ +1 (814) 566-9208 ~ Made with <i class="icon-heart-empty"></i> in Seattle, WA
   #call-now.call: div Call now
   #phone(style="display: none") (814) 566-9208
   #gallery(style="display: none")
     .pane
+    .prev: i.icon-arrow-left
+    .next: i.icon-arrow-right
+    .fullscreen: i.icon-fullscreen
+    .autoplay: i.icon-play
   script(type="text/javascript", src="http://code.jquery.com/jquery-1.9.1.min.js")
   != js('/javascripts/main')
